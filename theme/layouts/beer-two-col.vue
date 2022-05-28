@@ -8,37 +8,6 @@
         <slot name="right" />
       </div>
     </section>
-    <div id="bubble-target" />
+    <slot name="outside" />
   </div>
 </template>
-
-<script>
-export default { inheritAttrs: false }
-</script>
-
-<script setup>
-import { onMounted } from 'vue'
-
-const coinflip = () => Math.round(Math.random()) == 0 ? 1 : -1
-const boundedRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
-
-onMounted(() => {
-  const container = document.querySelector('#bubble-target')
-
-  const bubbleCount = boundedRandom(12, 24)
-  for (const _ of Array.from({ length: bubbleCount })) {
-    const bubble = document.createElement('div')
-    bubble.className = `bubble backface-hidden absolute z-0`
-    bubble.style.right = boundedRandom(0, 960) + 'px'
-    bubble.style.bottom = (coinflip() * boundedRandom(0, 540)) + 'px'
-    const bubbleInner = document.createElement('div')
-    bubbleInner.className = 'bubble-inner rounded-full'
-    const size = boundedRandom(0, 16)
-    bubbleInner.style.height = size + 'px'
-    bubbleInner.style.width = size + 'px'
-    bubbleInner.style.background = '#D7C65C'
-    bubble.appendChild(bubbleInner)
-    container.appendChild(bubble)
-  }
-})
-</script>

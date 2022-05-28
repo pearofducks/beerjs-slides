@@ -5,26 +5,3 @@ body {
 #slide-content {
   background-color: #e7db87;
 }
-
-@keyframes bubble {
-  0% {
-    transform: translateY(32px);
-  }
-  100% {
-    transform: translateY(-560px);
-  }
-}
-@keyframes bubble-wobble {
-  0% {
-    transform: translateX(10%);
-  }
-  100% {
-    transform: translateX(-10%);
-  }
-}
-.bubble {
-  animation: bubble 12s linear infinite;
-}
-.bubble .bubble-inner {
-  animation: bubble-wobble 1.2s ease-in-out infinite alternate;
-}
