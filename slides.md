@@ -28,7 +28,7 @@ layout: beer-two-col
 
 # Tonight's hosts
 
-<div class="grid grid-cols-[max-content,max-content] place-content-center gap-32 h-96">
+<div class="grid grid-rows-2 auto-rows-fr gap-8 h-2/3 mt-8">
   <host name="Dave" image="/dave.jpg" />
   <host name="Benja" image="/benja.png" />
 </div>

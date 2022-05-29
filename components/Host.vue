@@ -6,8 +6,8 @@ defineProps({
 </script>
 
 <template>
-  <div class="relative w-56 h-56 rounded-full border border-black border-opacity-25" style="background: #e7db87">
-    <h3 class="absolute -bottom-4 -right-4 z-10 opacity-80">{{ name }}</h3>
-    <img class="h-full w-full rounded-full filter grayscale mix-blend-luminosity opacity-75" :src="image" />
+  <div class="relative rounded-full flex items-center">
+    <img class="h-full aspect-square rounded-full filter grayscale mix-blend-luminosity opacity-75  border border-black border-opacity-50" :src="image" />
+    <h3 class="opacity-80 ml-8">{{ name }}</h3>
   </div>
 </template>
