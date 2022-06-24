@@ -10,6 +10,10 @@ layout: beer-two-col
 ---
 
 # Welcome to BeerJS!
+### WIFI
+- 📶 Finn
+- 🔒 takhoyde
+
 
 ::right::
 
